@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+:root {
+  --background-color: #f1f5f9;
+  --body-color: #687082;
+  --white: #ffffff;
+  --border: #e1e4e9;
+  --hover-border: #a4a9b5;
+  --focus-border: #039be5;
+  --button-color: #0d8bff;
+  --color-text: #687082;
+  --black: #162136;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  color: var(--color-text) !important;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: var(--background-color) !important;
+}
+.container {
+  width: 1140px;
+  min-width: 1200;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin: 0 auto;
+}
+input[type="number"] {
+  -webkit-appearance: none;
+}
+.bl {
+  color: var(--black);
+}
+.mortgage {
+  background: var(--white);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: rgba(22, 33, 54, 0.05) 0px 1px 8px 0px;
+}
+.border-input {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 8px 16px;
+}
+.border-input:hover {
+  border: 1px solid var(--hover-border);
+}
+.border-input:focus-within {
+  border: 1px solid var(--focus-border);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.payment {
+  background-color: rgb(245, 245, 245);
+  border-radius: 16px;
+  padding: 32px !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.payment a {
+  display: block;
+  border-radius: 8px;
+  background-color: var(--button-color);
+  padding: 16px 24px;
+  color: var(--white);
+  text-decoration: none;
 }
-
-.App-link {
-  color: #61dafb;
+.line {
+  height: 7px;
+  background-color: var(--button-color);
+  border-radius: 16px;
+  border: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#mortgage-form .row {
+  padding: 5px;
+}
+#mortgage-form label {
+  font: 1em sans-serif;
+  display: inline-block;
+  width: 150px;
+}
+#mortgage-form input {
+  width: 90%;
+  outline: 0;
+  border: none;
+  border-radius: 20px;
+}
+input[type="text"]::placeholder {
+  color: var(--black);
 }
